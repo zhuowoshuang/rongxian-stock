@@ -21,6 +21,39 @@
 - **中英文界面** — 完整的 i18n 支持
 - **暗色/亮色主题** — 一键切换
 
+## 一键部署（在线使用）
+
+### Railway（推荐，免费）
+
+1. Fork 本仓库到你的 GitHub
+2. 访问 [railway.app](https://railway.app)
+3. 点击 **New Project** → **Deploy from GitHub repo**
+4. 选择你 fork 的仓库
+5. Railway 自动检测配置并部署
+6. 部署完成后访问分配的 URL
+
+### Render（免费）
+
+1. Fork 本仓库到你的 GitHub
+2. 访问 [render.com](https://render.com)
+3. 点击 **New** → **Web Service**
+4. 连接 GitHub 仓库
+5. Render 自动检测 `render.yaml` 配置
+6. 点击 **Create Web Service**
+
+### Vercel（前端）+ Railway（后端）
+
+**后端：**
+1. 在 Railway 部署后端（同上）
+2. 记录后端 URL（如 `https://rongxian-backend.up.railway.app`）
+
+**前端：**
+1. Fork 本仓库
+2. 访问 [vercel.com](https://vercel.com)
+3. 导入 GitHub 仓库
+4. 设置环境变量 `BACKEND_URL` = 后端 URL
+5. 部署
+
 ## 快速开始
 
 ### 方式一：Docker Compose（推荐）

@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: rongxian-backend
+    runtime: python
+    buildCommand: cd backend && pip install -r requirements.txt
+    startCommand: cd backend && python -m app.seed && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./stock_agent.db
+      - key: MOCK_DATA
+        value: "true"
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: "3.11"
+    plan: free
