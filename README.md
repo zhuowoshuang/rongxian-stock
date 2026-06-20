@@ -21,38 +21,35 @@
 - **中英文界面** — 完整的 i18n 支持
 - **暗色/亮色主题** — 一键切换
 
-## 一键部署（在线使用）
+## 一键部署
 
-### Railway（推荐，免费）
+**点击下方按钮，直接从 GitHub 部署到线上：**
 
-1. Fork 本仓库到你的 GitHub
-2. 访问 [railway.app](https://railway.app)
-3. 点击 **New Project** → **Deploy from GitHub repo**
-4. 选择你 fork 的仓库
-5. Railway 自动检测配置并部署
-6. 部署完成后访问分配的 URL
+### 方案一：Vercel（前端，免费）
 
-### Render（免费）
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/zhuowoshuang/rongxian-stock&root-directory=frontend&env=BACKEND_URL&envDescription=后端API地址&envLink=https://github.com/zhuowoshuang/rongxian-stock)
 
-1. Fork 本仓库到你的 GitHub
-2. 访问 [render.com](https://render.com)
-3. 点击 **New** → **Web Service**
-4. 连接 GitHub 仓库
-5. Render 自动检测 `render.yaml` 配置
-6. 点击 **Create Web Service**
+> 点击按钮 → 登录 Vercel → 自动部署前端 → 拿到 URL
 
-### Vercel（前端）+ Railway（后端）
+**注意：** 前端需要后端配合。后端请用下方 Railway 按钮部署，然后把后端 URL 填入 `BACKEND_URL` 环境变量。
 
-**后端：**
-1. 在 Railway 部署后端（同上）
-2. 记录后端 URL（如 `https://rongxian-backend.up.railway.app`）
+### 方案二：Railway（全栈，免费额度）
 
-**前端：**
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/zhuowoshuang/rongxian-stock?referralCode=mimo)
+
+> 点击按钮 → 登录 Railway → 自动部署前后端 → 拿到 URL 直接访问
+
+### 方案三：Render（全栈，免费）
+
 1. Fork 本仓库
-2. 访问 [vercel.com](https://vercel.com)
-3. 导入 GitHub 仓库
-4. 设置环境变量 `BACKEND_URL` = 后端 URL
-5. 部署
+2. 访问 [render.com](https://render.com) → **New Web Service**
+3. 连接你的 fork → 自动检测 `render.yaml` → 部署
+
+### 方案四：Docker 一键运行
+
+```bash
+docker run -p 8000:8000 -p 3000:3000 zhuowoshuang/rongxian-stock
+```
 
 ## 快速开始
 
